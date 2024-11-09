@@ -1,0 +1,19 @@
+.quiz-container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto;
+  }
+  

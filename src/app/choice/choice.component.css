@@ -1,0 +1,70 @@
+.choice-container {
+    display: flex;
+    /* background-color: rgba(255, 218, 185, 0.666); */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  :host {
+    display: block; /* Makes sure the component takes the full width */
+    background-color: rgba(255, 218, 185, 0.666); /* Light warm color */
+    min-height: 100vh; /* Ensures the background covers the full viewport height */
+    padding: 20px; /* Optional padding for the container */
+    font-family: Arial, sans-serif; /* Optional font styling */
+}
+
+  .choice-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  body {
+    background-color: #4d7ca6; /* Replace with your desired color */
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  .weeks-grid {
+    display: grid;
+    gap: 40px;
+    /* Define 4 columns for larger screens */
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    width: 100%;
+    max-width: 800px; /* Limit max width to avoid stretching too wide */
+  }
+  
+  .start-btn {
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 100px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .start-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive breakpoints for smaller screens */
+  @media (max-width: 768px) {
+    .weeks-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .weeks-grid {
+      grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+  }
+  

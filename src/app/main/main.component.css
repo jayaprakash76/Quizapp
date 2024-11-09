@@ -1,0 +1,37 @@
+.main-container {
+    text-align: center;
+    margin-top: 100px;
+    flex-direction: column;
+    justify-content: flex-start; 
+    height: 100vh; /* Full viewport height to push footer-text to the end */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    color: #f1390b;
+  }
+  
+  p {
+    color: #777;
+    font:400;
+    margin: 20px 0;
+  }
+  
+  .start-btn {
+    background-color: #add8e6;
+    color: #333;
+    padding: 20px 40px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  :host {
+    display: block; /* Makes sure the component takes the full width */
+    background-color: rgba(255, 218, 185, 0.666); /* Light warm color */
+    min-height: 100vh; /* Ensures the background covers the full viewport height */
+    padding: 20px; /* Optional padding for the container */
+    font-family: Arial, sans-serif; /* Optional font styling */
+}

@@ -1,0 +1,30 @@
+<div *ngFor="let question of questions; let i = index" class="question-card">
+    <h3>{{ i + 1 }}. {{ question.question }}</h3>
+    <div class="options-container">
+      <label
+        *ngFor="let option of question.options"
+        class="option-box"
+        [class.correct]="isSubmitted && option === question.answer"
+        [class.incorrect]="isSubmitted && question.selectedOption === option && option !== question.answer"
+        [class.selected]="question.selectedOption === option"
+        [class.selected-correct]="isSubmitted && option === question.answer && question.selectedOption === option"
+      >
+        <input
+          type="radio"
+          name="question{{ i }}"
+          [(ngModel)]="question.selectedOption"
+          [value]="option"
+          (change)="question.selectedOption = option"
+          [disabled]="isSubmitted" 
+        />
+        {{ option }}
+      </label>
+    </div>
+  </div>
+  
+  <button (click)="calculateScore()" class="submit-button" [disabled]="isSubmitted">Submit</button>
+  
+  <div *ngIf="isSubmitted" class="score-container">
+    <h3>Your score is: {{ score }}/{{ questions.length }}</h3>
+  </div>
+  
